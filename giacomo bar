@@ -1,0 +1,36 @@
+#dichiarazione variabili
+nome_barman = "Giacomo"
+drink_speciale = "Profumo di pene"
+prezzo_drink= 5.5
+alcolici = ["pisellodrink","white russian", "anale"]
+analcolici = ["limonosa", "gazosa"]
+
+#inizio del programma 
+print ("Benvenuto al pub di giacomo")
+print ("mi chiamo" + nome_barman+ "...e sono pronto a servirti mio puppy")
+print ("il drink migliore di questo posto è: "+str(drink_speciale))      
+print ("provalo al modico prezzo di: "+str(prezzo_drink))
+print ("\nI drink alcolici sono" + str(len(alcolici)))
+print ("\nI drink analcolici sono" +str(len(analcolici))) 
+print ("\ninserisci il tuo anno di nascita")
+anno_nascita = int(input())
+anni_cliente = 2026 - anno_nascita
+print ("hai " + str(anni_cliente)+ " anni")
+drink_disponibili =[]
+if anni_cliente < 18:
+    print ("\nSei minorenne: puoi ordinare solo analcolici")
+    drink_disponibili += analcolici
+else: 
+    print ("\nSei maggiorenne: puoi ordinare alcolici e analcolici")
+    drink_disponibili = analcolici+alcolici
+while True: 
+    print ("\nEcco i drink disponibili per te:") 
+    for drink_disponibile in drink_disponibili:
+        print (drink_disponibile)
+    drink_scelto = input()
+    if drink_scelto in drink_disponibili:
+        print ("hai scelto " + drink_scelto +". Buon apertivo cucciolone")
+        break
+    else:
+        print ("mi spiace il drink "+drink_scelto+" non è disponibile") 
+
